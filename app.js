@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
-// Importaciones con rutas correctas según la carpeta 'src'
+// Rutas
 const habitacionesRoutes = require('./src/routes/habitaciones.routes');
 const reservasRoutes = require('./src/routes/reservas.routes');
 const errorHandler = require('./src/middlewares/errorHandler');

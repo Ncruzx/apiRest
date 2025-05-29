@@ -1,6 +1,6 @@
 const db = require('../db/connection');
 
-// Obtener todas las habitaciones
+// habitaciones
 exports.getHabitaciones = async (req, res, next) => {
   try {
     const [rows] = await db.query('SELECT * FROM habitaciones');
@@ -10,7 +10,7 @@ exports.getHabitaciones = async (req, res, next) => {
   }
 };
 
-// Obtener una habitación por código
+// habitación por código
 exports.getHabitacionById = async (req, res, next) => {
   try {
     const [rows] = await db.query('SELECT * FROM habitaciones WHERE codigo = ?', [req.params.codigo]);
